@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flashy Flashcards</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="/styles/styles.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bristol" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+  </head>
+  <body>
+
+    <!-- NAVIGATION BAR -->
+    <div class="top-bar">
+        <div class="nav-container">
+            <span><i class="fa fa-arrow-left"></i></span>
+            <span><i class="fa fa-home"></i></span>
+            <span><i class="fa fa-save"></i></span>
+        </div>
+        <div class="box-container">
+            <span><i class="fa fa-caret-down"></i></span>
+            <span>Box #1</span>
+        </div>
+        <div class="name-container">
+            <div>
+                Paul Groening
+            </div>
+            <div class="deck-menu">
+                <span><i class="fa fa-caret-down"></i></span>
+                <span>Kolloid</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-container">
+        <div class="card-container">
+            <div class="card">
+                <div class="face front">
+                <div id="flash">FLASH</div>
+                <div class="">CARDS</div>
+            </div>
+                <div class="face back">
+                    <div>...</div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="menu">
+            <button class="menu-btn">CREATE</button>
+            <button class="menu-btn">LOAD</button>
+            <button class="menu-btn">EXPLORE</button>
+        </div>
+    </div>
+
+
+
+
+    <!-- Scripts -->
+    <script src="/utils/utils.js"></script>
+    <script src="/objects/Card.js"></script>
+
+  </body>
+</html>
