@@ -3,8 +3,31 @@ class App {
         this.name = config.name || "Ola Nordmann";
         this.deck_list = null;
         this.box = 1;
+        
+
         this.load();
         this.add_event_listeners();
+    }
+
+    init(){
+        this.name_input_popup = new InputPopup({
+            input_fields: [
+                {
+                    id: "name",
+                    label: "Name: ",
+                    value: this.name,
+                    name: "name",
+                }
+            ],
+            app: this,
+        })
+
+        this.name_input_popup.init();
+    }
+
+    updatename(name){
+        this.name = name;
+        this.name_btn.innerText=name;
     }
 
     load(config){
@@ -18,20 +41,9 @@ class App {
 
     add_event_listeners(){
         
-        let name_btn = document.getElementById("name");
-        name_btn.addEventListener("click", () => {
-            let popup = new InputPopup({
-                input_fields: [
-                    {
-                        id: "name",
-                        label: "Name: ",
-                        value: this.name,
-                    }
-                ],
-                infotext: "Haha"
-            })
-
-            popup.insert()
+        this.name_btn = document.getElementById("name");
+        this.name_btn.addEventListener("click", () => {
+            this.name_input_popup.insert()
         })
     }
 

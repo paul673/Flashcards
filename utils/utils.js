@@ -7,5 +7,6 @@ function sum_array(arr) {
 }
 
 function formToObject(form) { 
+    console.log(form);
     return Object.fromEntries(new FormData(form))
 };

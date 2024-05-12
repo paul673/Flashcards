@@ -1,3 +1,4 @@
 (function init(){
-    new App({name:"Paul Groening"});
+    const app = new App({name:"Paul Groening"});
+    app.init();
 })();

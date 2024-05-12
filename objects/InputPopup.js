@@ -2,10 +2,12 @@ class InputPopup {
     constructor (config) {
         this.input_fields = config.input_fields || null;
         this.infotext = config.infotext || null;
-        this.load()
+        this.data = {};
+        this.app = config.app;
+        this.generate_html();
     }
 
-    load(){
+    generate_html(){
         // Create main container
         this.background = document.createElement("div");
         this.background.classList.add("popup-background");
@@ -45,6 +47,36 @@ class InputPopup {
         this.save_button.innerText="Save";
         button_container.classList.add("popup-button-container");
 
+  
+
+
+    }
+
+    init() {
+        
+        this.add_eventlisteners();
+    }
+
+    close(){
+        this.background.remove();
+    }
+
+    save(){
+        console.log(this.form);
+        let data = formToObject(this.form);
+        Object.keys(data).forEach(key => {
+            this.app["update"+key](data[key])
+        }); 
+        this.close();
+    }
+
+    add_eventlisteners () {
+        this.close_button.addEventListener("click", ()=>{
+            this.close();
+        })
+        this.save_button.addEventListener("click", ()=>{
+            this.save();
+        })
     }
 
     insert(){
