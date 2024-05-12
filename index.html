@@ -10,6 +10,8 @@
 
     <!-- Styles -->
     <link href="/styles/styles.css" type="text/css" rel="stylesheet">
+    <link href="/styles/popup.css" type="text/css" rel="stylesheet">
+
     <link href="https://fonts.cdnfonts.com/css/bristol" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 
@@ -19,22 +21,23 @@
     <!-- NAVIGATION BAR -->
     <div class="top-bar">
         <div class="nav-container">
-            <span><i class="fa fa-arrow-left"></i></span>
-            <span><i class="fa fa-home"></i></span>
-            <span><i class="fa fa-save"></i></span>
+            <span><button class=""><i class="fa fa-arrow-left"></i></button></span>
+            <span><button><i class="fa fa-home"></button></i></span>
+            <span><button><i class="fa fa-save"></button></i></span>
         </div>
-        <div class="box-container">
+        <button class="box-container">
             <span><i class="fa fa-caret-down"></i></span>
             <span>Box #1</span>
-        </div>
+        </button>
         <div class="name-container">
             <div>
+            <button id="name">
                 Paul Groening
-            </div>
-            <div class="deck-menu">
+            </button></div>
+            <div><button class="deck-menu">
                 <span><i class="fa fa-caret-down"></i></span>
                 <span>Kolloid</span>
-            </div>
+            </button></div>
         </div>
     </div>
 
@@ -64,7 +67,13 @@
 
     <!-- Scripts -->
     <script src="/utils/utils.js"></script>
+    <script src="/objects/InputPopup.js"></script>
     <script src="/objects/Card.js"></script>
+    <script src="/objects/CardDeck.js"></script>
+    <script src="/objects/App.js"></script>
+
+    <!-- Init -->
+    <script src="/init.js"></script>
 
   </body>
 </html>

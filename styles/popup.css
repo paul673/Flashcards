@@ -1,0 +1,70 @@
+.popup-background {
+    background-color: rgba(0,0,0,0.7);
+    width:100vw;
+    height:100vh;
+    z-index: 10;
+    position: absolute;
+    top:0;
+    left:0;
+
+}
+
+.popup {
+    background: var(--background-color);
+    margin: auto;
+    top: 50%;
+    position: relative;
+    transform: translateY(-75%);
+    border-radius: 3rem;
+    padding: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 3rem;
+    max-width: 30vw;
+
+    
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: var(--light-color);
+}
+
+.popup > form > input {
+    border-radius: 1rem;
+    font-size: 2rem;
+    border-color: var(--text-color);
+    background-color: transparent;
+    color:var(--text-color);
+    max-width: 100%;
+
+
+}
+
+.popup > form > label {
+    border-radius: 1rem;
+    font-size: 2rem;
+    margin-left: 1rem;
+    max-width: 100%;
+    
+}
+
+.popup-button-container {
+    display:flex;
+    justify-content: space-around;
+    margin: 1rem;
+
+}
+
+
+.popup-button-container > button:hover {
+    /*color:var(--light-color);*/
+    /*text-shadow: 0 3rem 3rem var(--light-color);*/
+
+    text-shadow:
+    3px 3px 2px var(--light-color),
+    -3px 3px 2px var(--light-color),
+    -3px -3px 0 var(--light-color),
+    3px -3px 0 var(--light-color);
+
+    cursor: pointer; 
+}

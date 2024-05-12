@@ -23,12 +23,22 @@
 
 }
 
+input {
+    font-style: bold;
+    font-family: "Bristol", sans-serif;
+}
+
 button {
     background: none;
     border: none;
     background-color: transparent;
     margin: 0;
     padding:0;
+    font-size: 2rem;
+    color: var(--text-color);
+    font-style: bold;
+    font-family: "Bristol", sans-serif;
+    cursor:pointer;
 }
 
 
